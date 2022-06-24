@@ -1,3 +1,7 @@
+// Declare Declare empty array.
+let myLibrary = [];
+
+// Object Constructor.
 function Book(title, author, pages, read)
 {
     this.title = title;
@@ -8,6 +12,12 @@ function Book(title, author, pages, read)
     {
         return(title + author + ", " + pages + ", " + read);
     }
+}
+
+// Add a book to library.
+function addBookToLibrary()
+{
+    // Add a book.
 }
 
 const theHobbit = new Book("The Hobbit", " by J.R.R Tolkien", " 295 pages", " not read yet");
