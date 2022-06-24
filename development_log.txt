@@ -1,0 +1,6 @@
+LIBRARY develpoment log
+
+06/23/2022 23:27 - Project setup.
+    -Add index.html, style.css, readme.md and development log files.
+    -Add object constructor for book objects.
+    -Create book first book object.
