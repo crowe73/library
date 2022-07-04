@@ -27,3 +27,4 @@ LIBRARY develpoment log
     -Refactor addBookToLibrary() function.
     -Refactor displayBooksOnPage() function.
     -Add function to clear the form.
+    -Add css rules to style form and buttons.
