@@ -24,7 +24,24 @@
             </div>
 
             <div class="form">
-                <p>Test Form Info</p>
+                <!--<p>Test Form Info</p>-->
+                <button class="add_book_button">Add New Book</button>
+                
+                <div id="add_book_form" style="display:none">
+                    <form id="add_book">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title">
+                        <label for="author">Author:</label>
+                        <input type="text" id="author" name="author">
+                        <label for="pages">Pages:</label>
+                        <input type="text" id="pages" name="pages">
+                        <label for="read">Read:</label>
+                        <input type="text" id="read" name="read">
+                    </form>
+
+                    <button type="submit" class="submit_button">Submit To Library</button>
+                    <button type="reset" class="reset_button">Reset Form</button>
+                </div>
             </div>
 
             <div class="books">

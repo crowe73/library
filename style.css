@@ -32,6 +32,39 @@ h1
 .form
 {
     border-style: groove;
+    padding-bottom: 80px;
+}
+
+.add_book_button
+{
+    margin-top: 70px;
+}
+
+#add_book
+{
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    gap: 10px;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#title, #author, #pages, #read
+{
+    border-radius: 6px;
+}
+
+.add_book_button, .submit_button, .reset_button
+{
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.reset_button
+{
+    margin-left: 20px;
 }
 
 .books

@@ -18,3 +18,12 @@ LIBRARY develpoment log
     -Add normalize.css file.
     -Link normalize.css file to index.html file.
     -Remove body selector from style.css file.
+
+07/03/2022 21:03 - Add new book form.
+    -Add "add new book", "submit to library", and "reset form" buttons.
+    -Add "add book" form.
+    -Add function to display a form to add a new book to library.
+    -Add functions to submit form data to library.
+    -Refactor addBookToLibrary() function.
+    -Refactor displayBooksOnPage() function.
+    -Add function to clear the form.
