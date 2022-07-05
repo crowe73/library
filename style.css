@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .container
 {
+    font-family: 'Roboto', sans-serif;
     border-style: groove;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -75,10 +78,15 @@ h1
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column: 2 / 3;
     gap: 15px;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    padding: 15px;
+}
+
+.remove_book_button
+{
+    grid-row: 5 / 6;
+    font-weight: 900;
+    background-color: red;
+    border-radius: 10px;
 }
 
 .books .card

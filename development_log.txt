@@ -28,3 +28,8 @@ LIBRARY develpoment log
     -Refactor displayBooksOnPage() function.
     -Add function to clear the form.
     -Add css rules to style form and buttons.
+
+07/04/2022 21:30 - Remove book from library functionality.
+    -add "remove from library" button.
+    -Add removeBookFromLibrary() function.
+    -Add roboto font to page.

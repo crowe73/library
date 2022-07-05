@@ -39,16 +39,43 @@ function displayBooksOnPage()
     }
 
     // Loop over the library array and display to cards.
-    myLibrary.forEach(myLibrary => 
+    let index = 0;
+    myLibrary.forEach(myLibrarys => 
         {
             const card = document.createElement("div");
             card.classList.add("card");
             books.appendChild(card);
-            for (let key in myLibrary)
+
+            // Create remove book button and add class attributes for each array card.
+            const removeBookButton = document.createElement("button");
+            removeBookButton.classList.add("remove_book_button");
+            removeBookButton.textContent = "Remove From Library";
+            console.log("Show me my current array objects inside of foreach...", myLibrary);
+
+            // Link the data attribute of the remove button to the array and card.
+            removeBookButton.dataset.linkedArray = index;
+            index++;
+            console.log("Show me the dataset link back to the array...", removeBookButton.dataset.linkedArray);
+            card.appendChild(removeBookButton);
+
+            // Remove the array item from the array and card from parent div via data link.
+            removeBookButton.addEventListener("click", removeBookFromLibrary);
+
+            function removeBookFromLibrary()
             {
-                console.log(`${key}: ${myLibrary[key]}`);
+                let retrieveBookToRemove = removeBookButton.dataset.linkedArray;
+                console.log("Attempting to remove array item via data attribute...", parseInt(retrieveBookToRemove));
+                myLibrary.splice(parseInt(retrieveBookToRemove), 1);
+                card.remove();
+                displayBooksOnPage();
+            }
+
+            // Loop over the object keys and values and display to each card.
+            for (let key in myLibrarys)
+            {
+                console.log(`${key}: ${myLibrarys[key]}`);
                 const paragraph = document.createElement("p");
-                paragraph.textContent = (`${key}: ${myLibrary[key]}`);
+                paragraph.textContent = (`${key}: ${myLibrarys[key]}`);
                 card.appendChild(paragraph);
             }
         })
@@ -80,6 +107,7 @@ function intakeFormData()
     {
         return;
     }
+
     // Function call to input the book data to array.
     addBookToLibrary(title, author, pages, read);
 
