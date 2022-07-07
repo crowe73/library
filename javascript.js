@@ -8,10 +8,6 @@ function Book(title, author, pages, read)
     this.author = author;
     this.pages = pages;
     this.read = read;
-    //this.info = function()
-    //{
-        //return(title + author + ", " + pages + ", " + read);
-    //}
 }
 
 // Add a book to library.
@@ -21,9 +17,6 @@ function addBookToLibrary(title, author, pages, read)
     myLibrary.push(book);
     displayBooksOnPage();
 }
-
-//const theHobbit = new Book("The Hobbit", " by J.R.R Tolkien", " 295 pages", " not read yet");
-//console.log(theHobbit.info());
 
 // Display the library array to cards.
 function displayBooksOnPage()
@@ -54,7 +47,6 @@ function displayBooksOnPage()
 
             // Link the data attribute of the remove button to the array and card.
             removeBookButton.dataset.linkedArray = index;
-            index++;
             console.log("Show me the dataset link back to the array...", removeBookButton.dataset.linkedArray);
             card.appendChild(removeBookButton);
 
@@ -70,6 +62,40 @@ function displayBooksOnPage()
                 displayBooksOnPage();
             }
 
+            // Create read status button and add class attributes for each array card.
+            const readStatusButton = document.createElement("button");
+            readStatusButton.classList.add("read_status_button");
+            readStatusButton.textContent = "Toggle Read Status";
+
+            // Link the data attribute of the toggle read button to the array and card.
+            readStatusButton.dataset.linkedArray = index;
+            console.log("Show me the dataset link back to the array FOR READ STATUS BUTTON...", readStatusButton.dataset.linkedArray);
+            card.appendChild(readStatusButton);
+
+            // Toggle logic for array objects prototype for read status change.
+            readStatusButton.addEventListener("click", toggleReadStatus);
+
+            function toggleReadStatus()
+            {
+                let retrieveBookToToggle = readStatusButton.dataset.linkedArray;
+                Book.prototype = Object.create(Book.prototype);
+                const toggleBook = new Book();
+                console.log("What is the toggle initial value?...", myLibrary[parseInt(retrieveBookToToggle)].read);
+
+                // Run check to see  what read value is present to toggle from.
+                if ((myLibrary[parseInt(retrieveBookToToggle)].read) == "yes")
+                {
+                    toggleBook.read = "no";
+                    myLibrary[parseInt(retrieveBookToToggle)].read = toggleBook.read;
+                }
+                else if ((myLibrary[parseInt(retrieveBookToToggle)].read) == "no")
+                {
+                    toggleBook.read = "yes";
+                    myLibrary[parseInt(retrieveBookToToggle)].read = toggleBook.read;
+                }
+                displayBooksOnPage();
+            }
+
             // Loop over the object keys and values and display to each card.
             for (let key in myLibrarys)
             {
@@ -78,6 +104,8 @@ function displayBooksOnPage()
                 paragraph.textContent = (`${key}: ${myLibrarys[key]}`);
                 card.appendChild(paragraph);
             }
+
+        index++;
         })
 }
 
@@ -123,15 +151,3 @@ function clearForm()
 {
     document.getElementById("add_book").reset();
 }
-
-// Function calls to add books manually until form is built.
-/*addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-addBookToLibrary("The Hobbit", "J.R.R Tolkien", "295 pages", "not read yet");
-
-console.log("End of code array contents", myLibrary);
-
-displayBooksOnPage();*/

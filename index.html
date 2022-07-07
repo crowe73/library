@@ -24,7 +24,6 @@
             </div>
 
             <div class="form">
-                <!--<p>Test Form Info</p>-->
                 <button class="add_book_button">Add New Book</button>
                 
                 <div id="add_book_form" style="display:none">
@@ -36,7 +35,10 @@
                         <label for="pages">Pages:</label>
                         <input type="text" id="pages" name="pages">
                         <label for="read">Read:</label>
-                        <input type="text" id="read" name="read">
+                        <select id="read", name="read">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </form>
 
                     <button type="submit" class="submit_button">Submit To Library</button>
@@ -49,7 +51,7 @@
             </div>
 
             <div class="footer">
-                <p>Copyright &copy; 2022 Chad Rowe</p>
+                <p>&copy; 2022 Chad Rowe</p>
             </div>
         </div>
     </body>

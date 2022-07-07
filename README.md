@@ -13,3 +13,5 @@
 07/04/2022 12:30 - Add new book form.
 
 07/04/2022 21:30 - Remove book from library functionality.
+
+07/07/2022 00:15 - Toggle read status functionality.

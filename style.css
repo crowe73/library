@@ -3,7 +3,6 @@
 .container
 {
     font-family: 'Roboto', sans-serif;
-    border-style: groove;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: .1fr .1fr 2fr .1fr;
@@ -15,27 +14,32 @@
 {
     grid-column: 1 / 3;
     border-style: groove;
+    background-color: #1a1a1b;
 }
 
 .form_heading
 {
     border-style: groove;
+    background-color: #1a1a1b;
 }
 
 h1
 {
     text-align: center;
+    color: #d7dadc;
 }
 
 .books_heading
 {
     border-style: groove;
+    background-color: #1a1a1b;
 }
 
 .form
 {
     border-style: groove;
     padding-bottom: 80px;
+    background-color: #1a1a1b;
 }
 
 .add_book_button
@@ -56,10 +60,17 @@ h1
 #title, #author, #pages, #read
 {
     border-radius: 6px;
+    background-color: #d7dadc;
+}
+
+label
+{
+    color: #d7dadc;
 }
 
 .add_book_button, .submit_button, .reset_button
 {
+    background-color: #ce973e;
     border-radius: 10px;
     padding: 5px;
     box-shadow: 5px 5px 5px black;
@@ -72,7 +83,7 @@ h1
 
 .books
 {
-    background-color: #bccbde;
+    background-color: #444444;
     border-style: groove;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,21 +96,37 @@ h1
 {
     grid-row: 5 / 6;
     font-weight: 900;
-    background-color: red;
+    background-color: #63bfc4;
+    border-radius: 10px;
+}
+
+.read_status_button
+{
+    grid-row: 6 / 7;
+    font-weight: 900;
+    background-color: #ce973e;
+    color: #171717;
     border-radius: 10px;
 }
 
 .books .card
 {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #222222;
+    /*color: #000000;*/
     text-align: center;
     height: 400px;
     display: grid;
+    box-shadow: 5px 5px 5px black;
 }
 
 .footer
 {
     grid-column: 1 / 3;
     border-style: groove;
+    background-color: #1a1a1b;
+}
+
+p
+{
+    color: #d7dadc;
 }

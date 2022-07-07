@@ -33,3 +33,9 @@ LIBRARY develpoment log
     -add "remove from library" button.
     -Add removeBookFromLibrary() function.
     -Add roboto font to page.
+
+07/07/2022 00:15 - Toggle read status functionality.
+    -Refactor read input element of index.html file.
+    -Create "Toggle Read Status" button.
+    -Add toggleReadStatus() function.
+    -Add css styling rules to style "Toggle Read Status" button.
