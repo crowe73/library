@@ -15,3 +15,5 @@
 07/04/2022 21:30 - Remove book from library functionality.
 
 07/07/2022 00:15 - Toggle read status functionality.
+
+07/29/2022 22:16 - Refactor to class and restyle webpage.

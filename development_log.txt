@@ -39,3 +39,13 @@ LIBRARY develpoment log
     -Create "Toggle Read Status" button.
     -Add toggleReadStatus() function.
     -Add css styling rules to style "Toggle Read Status" button.
+
+07/29/2022 22:16 - Refactor to class and restyle webpage.
+    -Refactor plain constructor to class.
+    -Code cleanup.
+    -Restyle Add New Book, Submit To Library, and Reset Form buttons.
+    -Restyle form text and input boxes.
+    -Restyle all heading titles.
+    -Restyle copyright text in footer.
+    -restyle card text.
+    -Restyle Remove From Library, and Toggle Read Status buttons.
